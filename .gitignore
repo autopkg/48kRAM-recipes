@@ -3,3 +3,5 @@
 
 # don't track .pyc files
 *.pyc
+# I use vim :)
+.*.swp
