@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest Sweet Home 3D app and imports it into Munki</string>
+    <key>Identifier</key>
+    <string>com.github.48kRAM.autopkg.munki.sweethome3d</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>SweetHome3D</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>Sweet Home 3D is a free interior design application that helps you draw the plan of your house, arrange furniture on it and visit the results in 3D.</string>
+            <key>display_name</key>
+            <string>Sweet Home 3D</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.48kRAM.autopkg.download.sweethome3d</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
