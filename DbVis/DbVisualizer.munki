@@ -24,6 +24,10 @@
             <string>DbVisualizer</string>
             <key>name</key>
             <string>%NAME%</string>
+            <key>developer</key>
+            <string>DbVis Software</string>
+            <key>category</key>
+            <string>Database</string>
             <key>unattended_install</key>
             <true/>
         </dict>
