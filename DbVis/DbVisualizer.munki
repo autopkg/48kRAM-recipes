@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Imports the DbVisualizer package into Munki. rtrouton-recipes doesn't contain a Munki version.</string>
+    <key>Identifier</key>
+    <string>com.github.48kRAM.autopkg.munki.DbVisualizer</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>DbVisualizer</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>DbVisualizer is a database management and analysis tool for all major databases (e.g. Oracle, SQL Server, DB2, Sybase, MySQL, SQLite) on Windows, Mac OS X, Linux and Unix platforms with customers in 107 countries.</string>
+            <key>display_name</key>
+            <string>DbVisualizer</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.rtrouton.pkg.dbvisualizer</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
