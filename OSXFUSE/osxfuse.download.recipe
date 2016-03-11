@@ -12,6 +12,8 @@
         <string>OSXFUSE</string>
 	<key>OS_VERSION</key>
 	<string>10.8</string>
+	<key>INCLUDE_PRERELEASES</key>
+	<string>true</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -22,16 +24,17 @@
             <dict>
                 <key>os_version</key>
                 <string>%OS_VERSION%</string>
+		<key>include_prereleases</key>
+		<string>%INCLUDE_PRERELEASES%</string>
+                <key>github_repo</key>
+                <string>osxfuse/osxfuse</string>
+                <key>asset_regex</key>
+                <string>^osxfuse-.*dmg$</string>
             </dict>
             <key>Processor</key>
-            <string>OSXFuseURLProvider</string>
+            <string>GitHubReleasesInfoProvider</string>
         </dict>
         <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>filename</key>
-                <string>%NAME%.dmg</string>
-            </dict>
             <key>Processor</key>
             <string>URLDownloader</string>
         </dict>
