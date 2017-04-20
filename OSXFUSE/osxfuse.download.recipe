@@ -51,7 +51,7 @@
         		<string>%pathname%/Extras/FUSE*.pkg</string>
         		<key>expected_authority_names</key>
         		<array>
-            		<string>Developer ID Installer: Benjamin Fleischer</string>
+            		<string>Developer ID Installer: Benjamin Fleischer (3T5GSNBU6W)</string>
             		<string>Developer ID Certification Authority</string>
             		<string>Apple Root CA</string>
         		</array>
