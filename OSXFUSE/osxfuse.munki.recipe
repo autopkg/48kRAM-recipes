@@ -44,6 +44,14 @@
 			    <key>choiceIdentifier</key>
 			    <string>com.github.osxfuse.pkg.MacFUSE</string>
 		    </dict>
+		    <dict>
+			    <key>attributeSetting</key>
+			    <integer>1</integer>
+			    <key>choiceAttribute</key>
+			    <string>selected</string>
+			    <key>choiceIdentifier</key>
+			    <string>com.github.osxfuse.pkg.PrefPane</string>
+		    </dict>
 	    </array>
         </dict>
     </dict>
