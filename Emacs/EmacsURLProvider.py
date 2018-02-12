@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 #
 # Copyright 2015 Joshua Malone
 #
@@ -15,14 +15,14 @@
 # limitations under the License.
 """See docstring for EmacsURLProvider"""
 
-import urllib2
+import subprocess
 import xml.etree.ElementTree as ET
 
 from autopkglib import Processor, ProcessorError
 
 __all__ = ["EmacsURLProvider"]
 
-check_url = "http://emacsformacosx.com/atom/release"
+check_url = "https://emacsformacosx.com/atom/release"
 
 
 class EmacsURLProvider(Processor):
@@ -40,9 +40,10 @@ class EmacsURLProvider(Processor):
         """Provide a download URL for GNU Emacs for OSX"""
 	# Get the xml file of updates
 	try:
-	    fref = urllib2.urlopen(check_url)
-	    xmldata = fref.read()
-	    fref.close()
+	    xmldata = subprocess.check_output(('/usr/bin/curl',
+                                           '--silent',
+                                           '--location',
+                                           check_url))
 	except BaseException as err:
 	    raise ProcessorError("Can't download %s: %s" % (check_url, err))
 
