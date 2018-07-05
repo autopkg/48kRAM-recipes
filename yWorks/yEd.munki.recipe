@@ -29,7 +29,7 @@
         </dict>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>1.0.0</string>
     <key>ParentRecipe</key>
     <string>com.github.48kRAM.autopkg.download.yed</string>
     <key>Process</key>

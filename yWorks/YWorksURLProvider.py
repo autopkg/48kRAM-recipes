@@ -56,7 +56,7 @@ class YWorksURLProvider(Processor):
 	# Create download link
 	latest=txt.rstrip()
 	base_prod_url="http://www.yworks.com/products"
-	download_url = "%s/%s/demo/%s-%s_with-JRE8.dmg" % (base_prod_url, product_name.lower(), product_name, latest)
+	download_url = "%s/%s/demo/%s-%s_with-JRE10.dmg" % (base_prod_url, product_name.lower(), product_name, latest)
 	self.env["url"] = download_url
 	self.output("Found URL as %s" % self.env["url"])
 
