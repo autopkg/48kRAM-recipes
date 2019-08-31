@@ -2,6 +2,7 @@
 
 """See docstring for OSXfuseURLProvider class"""
 
+from __future__ import absolute_import
 import os
 import urllib2
 import plistlib

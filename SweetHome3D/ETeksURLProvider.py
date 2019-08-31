@@ -15,6 +15,7 @@
 # limitations under the License.
 """See docstring for ETeksURLProvider"""
 
+from __future__ import absolute_import
 import os
 import urllib2
 import xml.etree.ElementTree as ET
