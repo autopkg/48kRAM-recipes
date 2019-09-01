@@ -46,9 +46,8 @@ class ETeksURLProvider(Processor):
 
     def main(self):
         """Provide a download URL for Sweet Home 3D"""
-        valid_prods = prods.keys()
         product_name = self.env["product_name"]
-        if product_name not in valid_prods:
+        if product_name not in prods:
             raise ProcessorError("product_name %s is invalid" % (product_name))
 
         # Get the xml file of updates
