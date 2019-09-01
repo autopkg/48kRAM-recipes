@@ -16,10 +16,14 @@
 """See docstring for ETeksURLProvider"""
 
 from __future__ import absolute_import
-import urllib2
 import xml.etree.ElementTree as ET
 
 from autopkglib import Processor, ProcessorError
+
+try:
+    from urllib.request import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["ETeksURLProvider"]
 
@@ -52,7 +56,7 @@ class ETeksURLProvider(Processor):
 
         # Get the xml file of updates
         try:
-            fref = urllib2.urlopen(check_url)
+            fref = urlopen(check_url)
             xmldata = fref.read()
             fref.close()
         except BaseException as err:

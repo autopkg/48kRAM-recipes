@@ -16,9 +16,13 @@
 """See docstring for YWorksURLProvider"""
 
 from __future__ import absolute_import
-import urllib2
 
 from autopkglib import Processor, ProcessorError
+
+try:
+    from urllib.request import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["YWorksURLProvider"]
 
@@ -47,7 +51,7 @@ class YWorksURLProvider(Processor):
 
         # Get the text file
         try:
-            fref = urllib2.urlopen(check_url)
+            fref = urlopen(check_url)
             txt = fref.read()
             fref.close()
         except BaseException as err:
