@@ -16,6 +16,7 @@
 """See docstring for EmacsURLProvider"""
 
 from __future__ import absolute_import
+
 import subprocess
 import xml.etree.ElementTree as ET
 
