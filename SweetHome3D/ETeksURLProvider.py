@@ -19,23 +19,19 @@ from __future__ import absolute_import
 
 import xml.etree.ElementTree as ET
 
-from autopkglib import Processor, ProcessorError
-
-try:
-    from urllib.request import urlopen  # For Python 3
-except ImportError:
-    from urllib2 import urlopen  # For Python 2
+from autopkglib import Processor, ProcessorError, URLGetter
 
 __all__ = ["ETeksURLProvider"]
 
 check_url = "http://www.sweethome3d.com/SweetHome3DUpdates.xml"
 base_prod_url = "http://downloads.sourceforge.net/project/sweethome3d/SweetHome3D"
 
-prods = { "Installer" : "Installer DMG" }
+prods = {"Installer": "Installer DMG"}
 
 
-class ETeksURLProvider(Processor):
+class ETeksURLProvider(URLGetter):
     """This processor obtains a download URL for the latest version of Sweet Home 3D"""
+
     description = __doc__
     input_variables = {
         "product_name": {
@@ -44,9 +40,7 @@ class ETeksURLProvider(Processor):
         },
     }
     output_variables = {
-        "url": {
-            "description": "URL to latest version of the product.",
-        },
+        "url": {"description": "URL to latest version of the product.",},
     }
 
     def main(self):
@@ -57,21 +51,24 @@ class ETeksURLProvider(Processor):
 
         # Get the xml file of updates
         try:
-            fref = urlopen(check_url)
-            xmldata = fref.read()
-            fref.close()
+            xmldata = self.download(check_url)
         except BaseException as err:
             raise ProcessorError("Can't download %s: %s" % (check_url, err))
 
         # Create download link
         tree = ET.fromstring(xmldata)
         for installer in tree.findall("./update/[@id='SweetHome3D#%s']" % product_name):
-            if installer.attrib['operatingSystem'] == 'Mac OS X':
-                version = installer.attrib['version']
+            if installer.attrib["operatingSystem"] == "Mac OS X":
+                version = installer.attrib["version"]
 
-        download_url = "%s/SweetHome3D-%s/SweetHome3D-%s-macosx.dmg" % (base_prod_url, version, version)
+        download_url = "%s/SweetHome3D-%s/SweetHome3D-%s-macosx.dmg" % (
+            base_prod_url,
+            version,
+            version,
+        )
         self.env["url"] = download_url
         self.output("Found URL as %s" % self.env["url"])
+
 
 if __name__ == "__main__":
     PROCESSOR = ETeksURLProvider()
