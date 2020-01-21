@@ -50,7 +50,7 @@ class YWorksURLProvider(URLGetter):
 
         # Get the text file
         try:
-            txt = self.download(check_url)
+            txt = self.download(check_url, text=True)
         except BaseException as err:
             raise ProcessorError("Can't download %s: %s" % (check_url, err))
 
