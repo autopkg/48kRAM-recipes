@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest macFUSE package and imports it into Munki</string>
+    <key>Identifier</key>
+    <string>com.github.48kRAM.autopkg.munki.macfuse</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>macfuse</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>drivers</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>macFUSE allows you to extend OS X's native file handling capabilities via third-party file systems. macFUSE (v4) is a successor to OSXFUSE (v3), which has been used as a software building block by dozens of products, but is no longer being maintained.</string>
+            <key>display_name</key>
+            <string>MACFUSE</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+	    <key>installer_choices_xml</key>
+	    <array>
+		    <dict>
+			    <key>attributeSetting</key>
+			    <integer>1</integer>
+			    <key>choiceAttribute</key>
+			    <string>selected</string>
+			    <key>choiceIdentifier</key>
+			    <string>%OS_VERSION%$OSXFUSEMacFUSE</string>
+		    </dict>
+		    <dict>
+			    <key>attributeSetting</key>
+			    <integer>1</integer>
+			    <key>choiceAttribute</key>
+			    <string>selected</string>
+			    <key>choiceIdentifier</key>
+			    <string>com.github.osxfuse.pkg.MacFUSE</string>
+		    </dict>
+		    <dict>
+			    <key>attributeSetting</key>
+			    <integer>1</integer>
+			    <key>choiceAttribute</key>
+			    <string>selected</string>
+			    <key>choiceIdentifier</key>
+			    <string>com.github.osxfuse.pkg.PrefPane</string>
+		    </dict>
+	    </array>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.9</string>
+    <key>ParentRecipe</key>
+    <string>com.github.48kRAM.autopkg.pkg.macfuse</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pkg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
