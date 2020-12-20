@@ -34,7 +34,7 @@
 			    <key>choiceAttribute</key>
 			    <string>selected</string>
 			    <key>choiceIdentifier</key>
-			    <string>%OS_VERSION%$OSXFUSEMacFUSE</string>
+			    <string>io.macfuse.installer.components.core</string>
 		    </dict>
 		    <dict>
 			    <key>attributeSetting</key>
@@ -42,15 +42,7 @@
 			    <key>choiceAttribute</key>
 			    <string>selected</string>
 			    <key>choiceIdentifier</key>
-			    <string>com.github.osxfuse.pkg.MacFUSE</string>
-		    </dict>
-		    <dict>
-			    <key>attributeSetting</key>
-			    <integer>1</integer>
-			    <key>choiceAttribute</key>
-			    <string>selected</string>
-			    <key>choiceIdentifier</key>
-			    <string>com.github.osxfuse.pkg.PrefPane</string>
+			    <string>io.macfuse.installer.components.preferencepane</string>
 		    </dict>
 	    </array>
         </dict>
