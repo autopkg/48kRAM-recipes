@@ -19,7 +19,7 @@
             <key>Arguments</key>
             <dict>
                 <key>re_pattern</key>
-                <string>\/resources\/yed\/demo\/yEd-[0-9\.]+_with-JRE[0-9]+\.dmg</string>
+                <string>\/resources\/yed\/demo\/yEd-[0-9\.]+_with-JRE[0-9][0-9]+\.dmg</string>
                 <key>url</key>
                 <string>https://www.yworks.com/products/yed/download</string>
                 <key>result_output_var_name</key>
