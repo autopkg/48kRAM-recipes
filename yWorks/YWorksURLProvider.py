@@ -57,7 +57,7 @@ class YWorksURLProvider(URLGetter):
         # Create download link
         latest = txt.rstrip()
         base_prod_url = "http://www.yworks.com/products"
-        download_url = "%s/%s/demo/%s-%s_with-JRE14.dmg" % (
+        download_url = "%s/%s/demo/%s-%s_with-JRE15.dmg" % (
             base_prod_url,
             product_name.lower(),
             product_name,
