@@ -18,15 +18,21 @@
         <dict>
             <key>Arguments</key>
             <dict>
-                <key>product_name</key>
-                <string>yEd</string>
+                <key>re_pattern</key>
+                <string>\/resources\/yed\/demo\/yEd-[0-9\.]+_with-JRE[0-9]+\.dmg</string>
+                <key>url</key>
+                <string>https://www.yworks.com/products/yed/download</string>
+                <key>result_output_var_name</key>
+                <string>url_path</string>
             </dict>
             <key>Processor</key>
-            <string>YWorksURLProvider</string>
+            <string>URLTextSearcher</string>
         </dict>
         <dict>
             <key>Arguments</key>
             <dict>
+                <key>url</key>
+                <string>https://www.yworks.com/%url_path%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
