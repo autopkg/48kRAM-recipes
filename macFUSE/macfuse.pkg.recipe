@@ -18,8 +18,8 @@
     <key>Process</key>
     <array>
         <dict>
-        <key>Comment</key>
-        <string>Copy the pkg out of the DMG as it's flat and there's no need for the DMG</string>
+            <key>Comment</key>
+            <string>Copy the pkg out of the DMG as it's flat and there's no need for the DMG</string>
             <key>Arguments</key>
             <dict>
                 <key>source_pkg</key>
