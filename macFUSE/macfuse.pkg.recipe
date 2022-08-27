@@ -18,6 +18,15 @@
     <key>Process</key>
     <array>
         <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>warning_message</key>
+                <string>This recipe is no longer maintained. Please use the macFUSE recipes from https://github.com/autopkg/apizz-recipes instead.</string>
+            </dict>
+            <key>Processor</key>
+            <string>DeprecationWarning</string>
+        </dict>
+        <dict>
             <key>Comment</key>
             <string>Copy the pkg out of the DMG as it's flat and there's no need for the DMG</string>
             <key>Arguments</key>
