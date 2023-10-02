@@ -34,6 +34,22 @@
     <string>com.github.48kRAM.autopkg.download.yed</string>
     <key>Process</key>
     <array>
+        <string>DeprecationWarning</string>
+        <key>Arguments</key>
+        <dict>
+                <key>warning_message</key>
+                <string>These recipes have been replaced by: https://github.com/Daz-wallace/daz-recipes/tree/main/yWorks</string>
+            </dict>
+        </dict>
+        <dict>   
+            <key>Processor</key>   
+            <string>StopProcessingIf</string>   
+            <key>Arguments</key>   
+            <dict>   
+                <key>predicate</key>   
+                <string>TRUEPREDICATE</string>
+            </dict>
+        </dict>
         <dict>
             <key>Arguments</key>
             <dict>
