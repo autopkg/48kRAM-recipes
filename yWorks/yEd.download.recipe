@@ -10,18 +10,33 @@
     <dict>
         <key>NAME</key>
         <string>yEd</string>
+        <key>ARCH</key>
+        <string>x86_64</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>Process</key>
     <array>
         <dict>
+            <key>Processor</key>
+            <string>com.github.homebysix.FindAndReplace/FindAndReplace</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_string</key>
+                <string>%ARCH%</string>
+                <key>find</key>
+                <string>x86_64</string>
+                <key>replace</key>
+                <string>amd64</string>
+            </dict>
+        </dict>
+        <dict>
             <key>Arguments</key>
             <dict>
                 <key>re_pattern</key>
-                <string>\/resources\/yed\/demo\/yEd-[0-9\.]+_with-JRE[0-9][0-9]+\.dmg</string>
+                <string>\/(resources\/yed\/demo\/yEd-[\d\.]+_with-JRE\d+_%output_string%\.dmg)</string>
                 <key>url</key>
-                <string>https://www.yworks.com/products/yed/download</string>
+                <string>https://www.yworks.com/downloads#yEd</string>
                 <key>result_output_var_name</key>
                 <string>url_path</string>
             </dict>
@@ -34,7 +49,7 @@
                 <key>url</key>
                 <string>https://www.yworks.com/%url_path%</string>
                 <key>filename</key>
-                <string>%NAME%.dmg</string>
+                <string>%NAME%-%ARCH%.dmg</string>
             </dict>
             <key>Processor</key>
             <string>URLDownloader</string>
