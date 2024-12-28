@@ -12,9 +12,18 @@
         <string>EmacsForMacOSX</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.9</string>
+    <string>1.1</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>DeprecationWarning</string>
+            <key>Arguments</key>
+            <dict>
+                <key>warning_message</key>
+                <string>Recipes in the 48kRAM-recipes repository are deprecated and will soon be removed. Reply to this GitHub issue if you maintain an AutoPkg org repository and would like to take ownership of this recipe: https://github.com/autopkg/48kRAM-recipes/issues/38</string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>EmacsURLProvider</string>

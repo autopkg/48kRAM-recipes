@@ -25,7 +25,7 @@
             <key>Arguments</key>
             <dict>
                 <key>warning_message</key>
-                <string>Please switch to the macFUSE recipes elsewhere in this repo. The osxfuse recipes are deprecated and will be removed in the future.</string>
+                <string>Please use the macFUSE recipes from https://github.com/autopkg/apizz-recipes instead. The osxfuse recipes are deprecated and will be removed in the future.</string>
             </dict>
         </dict>
         <dict>
