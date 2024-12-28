@@ -8,4 +8,4 @@ Add this recipe collection by running
 
 autopkg repo-add 48kRAM-recipes
 
-**Note:** I basically don't maintain these anymore. Many thanks to those who have submitted (and continue to submit) PRs to keep them working. I will continue to review and accept PRs.
+**Note:** This repo will soon be archived. See https://github.com/autopkg/48kRAM-recipes/issues/38 for details.
