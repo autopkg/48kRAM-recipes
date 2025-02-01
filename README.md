@@ -1,11 +1,9 @@
-# 48kRAM's recipes
+# 48kRAM-recipes
 
-My collection of autopkg recipes
+**This repository has been [archived](https://github.com/autopkg/48kRAM-recipes/issues/38) and its former contents have been removed.**
 
-See https://github.com/autopkg/autopkg
+The [commit history](https://github.com/autopkg/48kRAM-recipes/commits/master), [issues](https://github.com/autopkg/48kRAM-recipes/issues?q=is%3Aissue), and [pull requests](https://github.com/autopkg/48kRAM-recipes/pulls?q=is%3Apr) are still available for reference, but no future changes are planned.
 
-Add this recipe collection by running
+To remove this repository from your local AutoPkg setup, run:
 
-autopkg repo-add 48kRAM-recipes
-
-**Note:** This repo will soon be archived. See https://github.com/autopkg/48kRAM-recipes/issues/38 for details.
+    autopkg repo-delete 48kRAM-recipes
